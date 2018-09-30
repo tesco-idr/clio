@@ -3,12 +3,11 @@
 
     <{% if page.layout == "index" %}h1{% else %}div{% endif %} class="site-title">
       <a href="{{ site.baseurl }}/">
-        {% unless page.url == "/clio" %}
-          {{ site.title }}
-
-        {% endunless %}
-          <img src="tesco-white.png">
-
+          {% if page.url == "/clio" %}
+            {{ site.title }}
+          {% else %}
+            <img src="tesco-white.png">
+          {% endif %}
       </a>
     </{% if page.layout == "index" %}h1{% else %}div{% endif %}>
     <span><p class="lead">{{ site.description }}  </p></span>
