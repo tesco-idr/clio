@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Defaultdict, Counter, Sets"
-tags: [dicionary, collections, data-structure] 
+tags: [dictionary, collections, data-structure, tcsobay]
 ---
 
 The example cases are trying to count the words in a document:
@@ -26,11 +26,11 @@ for word in document:
 		word_counts[word] = 1
 ```
 
-A third approach is to use get, which behaves gracefully for missing keys: 
+A third approach is to use get, which behaves gracefully for missing keys:
 
 ```python
-word_counts = {} 
-for word in document: 
+word_counts = {}
+for word in document:
 	previous_count = word_counts.get(word, 0)
 	word_counts[word] = previous_count + 1
 ```
@@ -45,13 +45,13 @@ for word in document:
 	word_counts[word] += 1
 ```
 
-They can also be useful with list or dict or even your own functions: 
+They can also be useful with list or dict or even your own functions:
 
 ```python
-dd_list = defaultdict(list) # list() produces an empty list 
-dd_list[2].append(1) # now dd_list contains {2: [1]} 
-dd_dict = defaultdict(dict) # dict() produces an empty dict 
-dd_dict["Joel"]["City"] = "Seattle" # { "Joel" : { "City" : Seattle"}} 
+dd_list = defaultdict(list) # list() produces an empty list
+dd_list[2].append(1) # now dd_list contains {2: [1]}
+dd_dict = defaultdict(dict) # dict() produces an empty dict
+dd_dict["Joel"]["City"] = "Seattle" # { "Joel" : { "City" : Seattle"}}
 dd_pair = defaultdict(lambda: [0, 0]) dd_pair[2][1] = 1 # now dd_pair contains {2: [0,1]}
 ```
 
@@ -59,19 +59,19 @@ dd_pair = defaultdict(lambda: [0, 0]) dd_pair[2][1] = 1 # now dd_pair contains {
 
 A Counter turns a sequence of values into a defaultdict(int)-like object mapping keys to counts. We will primarily use it to create histograms:
 ```python
- from collections import Counter 
- c = Counter([0, 1, 2, 0]) # c is (basically) { 0 : 2, 1 : 1, 2 : 1 } 
+ from collections import Counter
+ c = Counter([0, 1, 2, 0]) # c is (basically) { 0 : 2, 1 : 1, 2 : 1 }
 ```
 
-This gives us a very simple way to solve our word_counts problem: 
+This gives us a very simple way to solve our word_counts problem:
 
 ```python
-word_counts = Counter(document) 
+word_counts = Counter(document)
 ```
 
 A Counter instance has a most_common method that is frequently useful:
 ```python
-# print the 10 most common words and their counts 
+# print the 10 most common words and their counts
 for word, count in word_counts.most_common(10): print word, count
 ```
 
@@ -96,10 +96,10 @@ appropriate than a list:
 stopwords_list = ["a","an","at"] + hundreds_of_other_words + ["yet", "you"]
 "zip" in stopwords_list # False, but have to check every element
 stopwords_set = set(stopwords_list)
-"zip" in stopwords_set # very fast to check 
+"zip" in stopwords_set # very fast to check
 ```
 
-Also *set* 
+Also *set*
 
 A set can be created inside curly braces {} or by using the built-in function set() and ca hold only *distinct* items:
 
@@ -115,4 +115,4 @@ distinct_item_list = list(item_set) 				# [1, 2, 3]
 
 ### Sources:
 * [Joel Grus - Data Science From Scratch: First Principles with Python](http://joelgrus.com/2015/04/26/data-science-from-scratch-first-principles-with-python/)
-* [Stackowerflow - How is membership testing different for a list and a set?](https://stackoverflow.com/questions/5230522/how-is-membership-testing-different-for-a-list-and-a-set) 
+* [Stackowerflow - How is membership testing different for a list and a set?](https://stackoverflow.com/questions/5230522/how-is-membership-testing-different-for-a-list-and-a-set)

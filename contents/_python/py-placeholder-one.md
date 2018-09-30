@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "py Title 1"
-tags: [isuki ]
+tags: [isuki]
 ---
 
 Python contect
