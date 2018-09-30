@@ -8,10 +8,10 @@
         {{ site.title }}
       </a>
     </{% if page.layout == "index" %}h1{% else %}div{% endif %}>
-    <img src="assets/tesco-white.png">
+
     <p class="lead">{{ site.description }}</p>
   </header>
-
+  {% include svg/tesco-white.png %}
   {% include sidebar-nav-links.html %}
   {% include sidebar-icon-links.html %}
 
