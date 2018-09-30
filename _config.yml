@@ -5,13 +5,13 @@ highlighter:      rouge
 # Setup
 title:            Clio
 tagline:          ''
-description:      'Muse of history'
+description:      'The IDR Library'
 repository:       'tesco-idr/clio'
 # url:              https://tesco-idr.github.io
 baseurl:          '/clio'
 author:
-  name:           'Tesco IDR'
-  url:            https://twitter.com/adamsequence
+  name:           'Thy IDR Librarian'
+  url:            
 
 plugins:
   - jekyll-feed

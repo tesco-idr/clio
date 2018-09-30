@@ -27,31 +27,31 @@ title: Notes
         {% endfor %}
 
       {% elsif item.title == "SQL"  %}
-    
+
         {% for item in site.sql %}
           <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
         {% endfor %}
 
-      {% elsif item.title == "R"  %}
-          
-        {% for item in site.r %}
+      {% elsif item.title == "Access"  %}
+
+        {% for item in site.access %}
           <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
         {% endfor %}
 
-      {% elsif item.title == "VBA"  %}
+      {% elsif item.title == "Excel"  %}
 
-        {% for item in site.vba %}
+        {% for item in site.excel %}
           <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
         {% endfor %}
-      
+
       
       {% endif %}
       </ul>
     </div>
 
   </article>
-  {% endfor %}      
-    
+  {% endfor %}
+
   {% include pagination-older.html %}
 
 </div>

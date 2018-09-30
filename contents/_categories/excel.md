@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Excel VBA"
+title: "Excel"
 ---
 
 {% for item in site.excel %}
