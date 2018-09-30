@@ -1,0 +1,57 @@
+---
+layout: default
+title: Notes
+---
+
+{% if page.date %}
+<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>
+{% endif %}
+
+<div class="content">
+  {% include pagination-newer.html %}
+
+  {% for item in site.categories %}
+  <article class="post-body">
+
+    <div>
+      <h2>{{ item.title }}</h2>
+    </div>
+
+    <div id="arcticle-element">
+      <ul>
+
+      {% if item.title == "Python"  %}
+
+        {% for item in site.python %}
+          <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
+
+      {% elsif item.title == "SQL"  %}
+    
+        {% for item in site.sql %}
+          <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
+
+      {% elsif item.title == "R"  %}
+          
+        {% for item in site.r %}
+          <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
+
+      {% elsif item.title == "VBA"  %}
+
+        {% for item in site.vba %}
+          <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
+      
+      
+      {% endif %}
+      </ul>
+    </div>
+
+  </article>
+  {% endfor %}      
+    
+  {% include pagination-older.html %}
+
+</div>

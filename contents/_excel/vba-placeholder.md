@@ -1,0 +1,28 @@
+---
+layout: page
+title: "VBA Title"
+tags: [isuki, tcsobay]
+---
+
+'''VBA
+
+
+Public Sub KillFilter()
+
+Dim Counter As Integer
+
+On Error Go To Hell
+If ActiveSheet.AutoFilterMode Then
+   ActiveSheet.AutoFilterMode = False
+
+End If
+
+Hell:
+
+Counter = 0
+Do While Counter < 100
+  Debug.Print "you need to participate on one more unnecessary meeting"
+
+End Sub
+
+'''

@@ -1,0 +1,46 @@
+
+<article class="post-body">
+
+  {% assign ptags =  site.python | map: 'tags' | uniq %}
+  {% assign rtags =  site.r | map: 'tags' | uniq %}
+  {% assign stags =  site.sql | map: 'tags' | uniq %}
+  {% assign vtags =  site.vba | map: 'tags' | uniq %}
+
+  {% assign tags =  ptags | concat: rtags | concat: stags | concat: vtags | uniq %}
+
+  <div id="arcticle-element">
+    <ul>
+
+      {% for tag in tags %}
+        <h3><a id="{{ tag }}"></a>{{ tag }}</h3>
+        <ul>
+          {% for item in site.python %}
+            {% if item.tags contains tag %}
+              <li><a href="{{ site.baseurl }}{{ item.url }}">Python - {{ item.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+
+          {% for item in site.r %}
+            {% if item.tags contains tag %}
+            <li><a href="{{ site.baseurl }}{{ item.url }}">R - {{ item.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+
+          {% for item in site.sql %}
+            {% if item.tags contains tag %}
+              <li><a href="{{ site.baseurl }}{{ item.url }}">SQL - {{ item.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+
+          {% for item in site.vba %}
+           {% if item.tags contains tag %}
+             <li><a href="{{ site.baseurl }}{{ item.url }}">VBA - {{ item.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      {% endfor %}
+
+    </ul>
+  </div>
+
+</article>

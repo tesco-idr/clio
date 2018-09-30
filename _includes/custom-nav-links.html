@@ -1,0 +1,5 @@
+<!-- Optional additional links to insert in sidebar nav -->
+
+{% for item in site.categories %}
+    <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }} </a>
+{% endfor %}

@@ -1,0 +1,47 @@
+# Dependencies
+markdown:         kramdown
+highlighter:      rouge
+
+# Setup
+title:            Clio
+tagline:          ''
+description:      'Muse of history'
+repository:       'tesco-idr/clio'
+# url:              https://tesco-idr.github.io
+baseurl:          '/clio'
+author:
+  name:           'Tesco IDR'
+  url:            https://twitter.com/adamsequence
+
+plugins:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
+
+# Custom vars
+sidebar_home_link:  false
+
+github:
+  repo:             https://github.com/tesco-idr
+
+collections_dir: contents
+collections:
+  categories:
+    output: true
+    permalink: :path/
+  python:
+    output: true
+    output_tags: true
+    permalink: /:collection/:name
+  access:
+    output: true
+    output_tags: true
+    permalink: /:collection/:name
+  sql:
+    output: true
+    output_tags: true
+    permalink: /:collection/:name
+  excel:
+    output: true
+    output_tags: true
+    permalink: /:collection/:name
