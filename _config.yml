@@ -5,7 +5,7 @@ highlighter:      rouge
 # Setup
 title:            Clio
 tagline:          ''
-description:      'The IDR Library'
+description:      'Thy IDR Librarian'
 repository:       'tesco-idr/clio'
 # url:              https://tesco-idr.github.io
 baseurl:          '/clio'
