@@ -4,7 +4,7 @@ title: "VBA Title"
 tags: [isuki, tcsobay]
 ---
 
-```VBA
+```vbnet
 
 
 Public Sub KillFilter()
