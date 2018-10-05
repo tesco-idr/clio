@@ -4,4 +4,7 @@ title: "Krisztaak"
 tags: [isuki, tcsobay]
 ---
 
-demo
+```visualbasic
+Public Sub democode()
+  debug.print "Hello Clio!"
+End Sub

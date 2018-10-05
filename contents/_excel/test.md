@@ -4,7 +4,7 @@ title: "Another VBA Title"
 tags: [isuki, tcsobay]
 ---
 
-```vbnet
+```visualbasic
 Public Sub KillFilter()
 
   Dim Counter As Integer
