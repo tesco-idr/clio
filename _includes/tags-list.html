@@ -20,9 +20,9 @@
             {% endif %}
           {% endfor %}
 
-          {% for item in site.r %}
+          {% for item in site.access %}
             {% if item.tags contains tag %}
-            <li><a href="{{ site.baseurl }}{{ item.url }}">R - {{ item.title }}</a></li>
+            <li><a href="{{ site.baseurl }}{{ item.url }}">Access - {{ item.title }}</a></li>
             {% endif %}
           {% endfor %}
 
@@ -32,9 +32,9 @@
             {% endif %}
           {% endfor %}
 
-          {% for item in site.vba %}
+          {% for item in site.excel %}
            {% if item.tags contains tag %}
-             <li><a href="{{ site.baseurl }}{{ item.url }}">VBA - {{ item.title }}</a></li>
+             <li><a href="{{ site.baseurl }}{{ item.url }}">Excel - {{ item.title }}</a></li>
             {% endif %}
           {% endfor %}
         </ul>
