@@ -1,4 +1,13 @@
 <nav id="sidebar-icon-links">
+  {% if site.github.repo %}
+    <a id="github-link"
+      class="icon{% if page.url == '/tags' %} active{% endif %}"
+      title="File Module" aria-label="File Module"
+      href="{{ site.baseurl }}{{ tags_page.url }}">
+      {% include svg/documents.svg %}
+    </a>
+  {% endif %}
+
  {% comment %}
     Check if we have tag or search pages page active before linking to it.
   {% endcomment %}
@@ -14,23 +23,12 @@
   {% endfor %}
 
   {% if tags_page %}
-  <span>
     <a id="tags-link"
        class="icon{% if page.url == '/tags' %} active{% endif %}"
        title="Tags" aria-label="Tags"
        href="{{ site.baseurl }}{{ tags_page.url }}">
-       Tags on Site
-      {% include svg/atom.svg %}
-    </a>
-
-    <a id="tags-link"
-       class="icon{% if page.url == '/tags' %} active{% endif %}"
-       title="File Module" aria-label="File Module"
-       href="{{ site.baseurl }}{{ tags_page.url }}">
-       File Module
       {% include svg/documents.svg %}
     </a>
-  </span>
   {% endif %}
 
   {% include custom-icon-links.html %}
