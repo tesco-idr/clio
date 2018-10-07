@@ -10,7 +10,7 @@
 
 <div class="post-tags">
   {% for tag in include.post.tags %}
-    {% if tags_page %}
+    {% if tags_page %} 
     <a href="{{ site.baseurl }}{{ tags_page.url }}#{{ tag | slugify }}">
     {% else %}<span>{% endif %}
       <span class="icon">
