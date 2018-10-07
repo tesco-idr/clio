@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Table Variables and Set operators"
-tags: [isuki, sql_custom, table variables, set operator, random tag]
+tags: [isuki, sql_custom, table variables, set operator, random tag, tcsobay]
 ---
 
 > create table College(cName VARCHAR(60), state VARCHAR(60), enrollment int);

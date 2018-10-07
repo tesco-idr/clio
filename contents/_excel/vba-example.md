@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "VBA Template"
-tags: [template, sometag]
+tags: [template, sometag, some other tag, tcsobay]
 ---
 
 ```visualbasic
